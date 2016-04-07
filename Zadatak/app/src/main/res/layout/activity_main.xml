@@ -1,0 +1,313 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    tools:context="com.example.android.kosarka.MainActivity"
+
+    tools:showIn="@layout/activity_main"
+
+    android:paddingTop="65dp"
+
+    android:orientation="vertical"
+
+    android:layout_weight="0"
+    android:background="@drawable/basketball"
+
+    >
+
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+
+        >
+
+
+
+        <!-- prvi LinearLayout -->
+
+
+        <LinearLayout
+
+            android:layout_height="wrap_content"
+
+            android:layout_width="match_parent"
+
+            android:layout_weight="1"
+
+            android:orientation="vertical"
+
+            >
+
+
+            <!-- TextView koji ispisuje: Domaći -->
+
+
+            <TextView
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:gravity="center_horizontal"
+
+                android:padding="8dp"
+                android:textColor="#03A9F4"
+                android:textSize="25dp"
+
+                android:text="Domaći:"
+
+                />
+
+
+            <!-- TextView koji ispisuje ukupan rezultat domacih igraca -->
+
+
+
+            <TextView
+
+                android:id="@+id/domaci_rezultat"
+
+                android:layout_height="wrap_content"
+
+                android:layout_width="match_parent"
+
+                android:gravity="center_horizontal"
+
+                android:padding="8dp"
+
+                android:textSize="25dp"
+                android:textColor="#FFFFFF"
+                android:text="0"
+
+                />
+
+
+
+            <!-- Button koji kada na njega pritisnemo dodaje +3 boda za domace igrace -->
+
+
+            <Button
+
+                android:id="@+id/trica_rezultat"
+
+                android:padding="8dp"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:text="+3"
+
+                android:onClick="trica_domaci"
+
+                />
+
+
+
+            <!-- Button koji kada na njega pritisnemo dodaje +2 boda za domace igrace -->
+
+
+
+            <Button
+
+                android:id="@+id/dva_rezultat"
+
+                android:padding="8dp"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:text="+2"
+
+                android:onClick="dva_domaci"
+
+                />
+
+
+
+            <!-- Button za slobodno bacaje koji dodaje samo 1 boda za domace igrace -->
+
+
+            <Button
+
+                android:id="@+id/Slobodno_rezultat"
+
+                android:padding="8dp"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:text="Slobodno bacanje"
+
+                android:onClick="slobodni_domaci"
+
+                />
+
+
+        </LinearLayout>
+
+
+
+
+        <!-- Pocetak drugog LinearLayouta -->
+
+
+        <LinearLayout
+
+            android:layout_height="wrap_content"
+
+            android:layout_width="match_parent"
+
+            android:layout_weight="1"
+
+            android:orientation="vertical"
+
+            >
+
+
+            <!-- TextView koji ispisuje: Gosti -->
+
+
+            <TextView
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:gravity="center_horizontal"
+
+                android:padding="8dp"
+                android:textColor="#D50000"
+                android:textSize="25dp"
+
+                android:text="Gosti:"
+
+                />
+
+
+
+            <!-- TextView koji ispisuje ukupan rezultat gostiju -->
+
+
+
+
+            <TextView
+
+                android:id="@+id/gosti_rezultat"
+
+                android:layout_height="wrap_content"
+
+                android:layout_width="match_parent"
+
+                android:gravity="center_horizontal"
+
+                android:padding="8dp"
+
+                android:textSize="25dp"
+                android:textColor="#FFFFFF"
+                android:text="0"
+
+                />
+
+
+
+
+            <!-- Button koji kada na njega pritisnemo dodaje +3 boda za goste -->
+
+
+
+            <Button
+
+                android:id="@+id/trica_rezultatGosti"
+
+                android:padding="8dp"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:text="+3"
+
+                android:onClick="trica_gosti"
+
+                />
+
+
+
+            <!-- Button koji kada na njega pritisnemo dodaje +2 boda za goste -->
+
+
+            <Button
+
+                android:id="@+id/dva_rezultatGosti"
+
+                android:padding="8dp"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:text="+2"
+
+                android:onClick="dva_gosti"
+
+                />
+
+
+            <!-- Button za slobodno bacaje koji dodaje samo 1 boda za goste -->
+
+
+            <Button
+
+                android:id="@+id/Slobodno_rezultatGosti"
+
+                android:padding="8dp"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:text="Slobodno bacanje"
+
+                android:onClick="slobodno_gosti"
+
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!-- Button za reset koji ponistava sve rezultate -->
+
+
+    <Button
+
+        android:id="@+id/reset"
+
+        android:layout_weight="0"
+
+        android:text="Reset"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:onClick="reset"/>
+
+     />
+
+</LinearLayout>
